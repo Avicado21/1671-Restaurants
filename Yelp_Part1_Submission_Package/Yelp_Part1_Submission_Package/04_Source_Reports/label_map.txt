@@ -1,0 +1,49 @@
+LABEL MAP
+================================================================
+
+Inclusion rule: a Yelp category is eligible as a label only
+if it names a national or regional cuisine. Dish tags
+(Salad, Pizza, Tacos), format tags (Fast Food, Diners),
+dietary tags (Vegan) and meal tags (Breakfast & Brunch) are
+excluded. The rule leaves no residual bucket, so there is no
+'Other' class: a business matching no cuisine is dropped.
+
+Collision policy:
+  1. A business matching 'American' plus exactly one cuisine
+     is assigned that cuisine.
+  2. A business matching two or more cuisines is dropped.
+
+Minimum reviews per label: 15,000
+
+KEPT (18 labels)
+----------------------------------------------------------------
+American: American (New), American (Traditional)
+British & Irish: British, Irish, Scottish
+Cajun/Creole: Cajun/Creole
+Caribbean: Caribbean, Cuban, Dominican, Haitian, Puerto Rican
+Chinese: Cantonese, Chinese, Hainan, Hong Kong Style Cafe, Shanghainese, Szechuan, Taiwanese
+Eastern Mediterranean: Afghan, Egyptian, Greek, Israeli, Lebanese, Mediterranean, Middle Eastern, Moroccan, Persian/Iranian, Turkish
+French: French
+German: Austrian, German
+Hawaiian: Hawaiian
+Italian: Italian
+Japanese: Japanese
+Korean: Korean
+Latin American: Argentine, Brazilian, Colombian, Honduran, Latin American, Peruvian, Salvadoran, Venezuelan
+Mexican: Mexican, New Mexican Cuisine, Tex-Mex
+South Asian: Bangladeshi, Himalayan/Nepalese, Indian, Pakistani, Sri Lankan
+Southern: Soul Food, Southern
+Thai: Thai
+Vietnamese: Vietnamese
+
+MAPPED BUT DROPPED (3 labels, under the minimum size)
+----------------------------------------------------------------
+African: African, Ethiopian, Senegalese, Somali
+Eastern European: Czech, Eastern European, Georgian, Hungarian, Polish, Russian, Ukrainian, Uzbek
+Spanish: Spanish
+
+Note: these labels are still matched during assignment,
+then removed afterward. Deleting them from LABEL_MAP
+instead would change the results, since a business
+tagged with a dropped label plus a kept one is currently
+a collision rather than a single-label match.

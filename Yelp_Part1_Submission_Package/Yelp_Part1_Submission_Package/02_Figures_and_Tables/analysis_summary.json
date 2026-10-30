@@ -1,0 +1,66 @@
+{
+  "dataset": "capped",
+  "rows": 293819,
+  "columns": 9,
+  "labels": 18,
+  "totals": {
+    "natural": {
+      "train": 2526284,
+      "dev": 316051,
+      "test": 315683,
+      "total": 3158018
+    },
+    "capped": {
+      "train": 235306,
+      "dev": 29283,
+      "test": 29230,
+      "total": 293819
+    }
+  },
+  "capped_fraction_of_natural": 0.09303905170901496,
+  "capped_smallest_class": 16123,
+  "capped_largest_class": 16497,
+  "features": [
+    {
+      "ngram_min": 1,
+      "ngram_max": 1,
+      "feature_set": "Unigrams",
+      "n_features": 28742
+    },
+    {
+      "ngram_min": 1,
+      "ngram_max": 2,
+      "feature_set": "Unigrams + bigrams",
+      "n_features": 360366
+    },
+    {
+      "ngram_min": 1,
+      "ngram_max": 3,
+      "feature_set": "Unigrams + bigrams + trigrams",
+      "n_features": 497393
+    },
+    {
+      "ngram_min": 2,
+      "ngram_max": 2,
+      "feature_set": "Bigrams only",
+      "n_features": 331624
+    },
+    {
+      "ngram_min": 3,
+      "ngram_max": 3,
+      "feature_set": "Trigrams only",
+      "n_features": 137027
+    }
+  ],
+  "sources": [
+    {
+      "filename": "dataset_distribution.txt",
+      "sha256": "8bfcc18074d1721c631d0cf9c0ed59819ca8b8670c9c679abcb2700ddd6fbdba"
+    },
+    {
+      "filename": "feature_stats.txt",
+      "sha256": "fc104dbf4f7650e070e4ad1a84789ffc88d56a899885300059a3bd37b3ecf28e"
+    }
+  ],
+  "scope": "Dataset descriptions and distributions only; no classifier was trained or evaluated."
+}

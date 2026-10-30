@@ -1,0 +1,5 @@
+01_final_cuisine_counts.png: counts in the final capped dataset across all three splits.
+02_natural_vs_capped.png: shares are calculated separately within each dataset; the denominators differ.
+03_final_split_sizes.png: actual capped split sizes, not exact nominal 80/10/10 counts.
+04_feature_vocabulary_sizes.png: number of feature columns, not accuracy or model quality.
+The raw CSV has nine columns. The vectorized feature matrices have the vocabulary dimensions shown.

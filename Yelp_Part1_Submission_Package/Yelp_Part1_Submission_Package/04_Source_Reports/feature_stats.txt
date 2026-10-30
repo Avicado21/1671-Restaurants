@@ -1,0 +1,46 @@
+N-GRAM FEATURE SETS
+================================================================
+Variant: capped
+Tokenizer: nltk
+min_df: 5 | max_features: 1,000,000
+Business name stripped from text: True
+
+(1,1) unigram only
+----------------------------------------------------------------
+  vocabulary: 28,742 features
+  composition: unigram 28,742
+  train    235,306 x    28,742  nnz   10,326,518  density 0.1527%
+  dev       29,283 x    28,742  nnz    1,290,294  density 0.1533%
+  test      29,230 x    28,742  nnz    1,299,568  density 0.1547%
+
+(1,2) up to bigram
+----------------------------------------------------------------
+  vocabulary: 360,366 features
+  composition: unigram 28,742, bigram 331,624
+  train    235,306 x   360,366  nnz   18,159,833  density 0.0214%
+  dev       29,283 x   360,366  nnz    2,232,834  density 0.0212%
+  test      29,230 x   360,366  nnz    2,244,669  density 0.0213%
+
+(1,3) up to trigram
+----------------------------------------------------------------
+  vocabulary: 497,393 features
+  composition: unigram 28,742, bigram 331,624, trigram 137,027
+  train    235,306 x   497,393  nnz   19,845,377  density 0.0170%
+  dev       29,283 x   497,393  nnz    2,420,058  density 0.0166%
+  test      29,230 x   497,393  nnz    2,430,725  density 0.0167%
+
+(2,2) bigram only
+----------------------------------------------------------------
+  vocabulary: 331,624 features
+  composition: bigram 331,624
+  train    235,306 x   331,624  nnz    7,833,315  density 0.0100%
+  dev       29,283 x   331,624  nnz      942,540  density 0.0097%
+  test      29,230 x   331,624  nnz      945,101  density 0.0097%
+
+(3,3) trigram only
+----------------------------------------------------------------
+  vocabulary: 137,027 features
+  composition: trigram 137,027
+  train    235,306 x   137,027  nnz    1,685,544  density 0.0052%
+  dev       29,283 x   137,027  nnz      187,224  density 0.0047%
+  test      29,230 x   137,027  nnz      186,056  density 0.0046%
